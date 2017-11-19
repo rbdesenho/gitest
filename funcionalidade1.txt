@@ -1,0 +1,28 @@
+import React, { Component } from 'react';
+import UserTableItem from './user-table-item'
+
+function UsersTable({ users }) {
+
+  const userItems = users.map((user) => {
+    return <UserTableItem user={user} />
+  });
+
+
+  return (
+    <div className="container">
+      <table className="ui celled padded table">
+        <thead>
+          <tr><th>Dados</th>
+            <th>Senha</th>
+          </tr></thead>
+        <tbody>
+
+          {userItems}
+
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+export default UsersTable;
